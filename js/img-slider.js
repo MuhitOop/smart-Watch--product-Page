@@ -1,4 +1,5 @@
 const ringBtns = document.querySelectorAll(".ring-button");
+let productImgBase = "../images/";
 
 for (let i = 0; i < ringBtns.length; i++){
     const ringBtn = ringBtns[i];
@@ -6,7 +7,7 @@ for (let i = 0; i < ringBtns.length; i++){
         // console.log(e.target);
         const color = e.target.id.replace('-color', '');
         
-        console.log(color)
+        // console.log(color)
 
         for (let j = 0; j < ringBtns.length; j++){
             ringBtns[j].classList.remove("border-purple-600");
@@ -18,7 +19,7 @@ for (let i = 0; i < ringBtns.length; i++){
 
         const productImage = document.getElementById("product-image");
         // productImage.src = "../images/cyan.png";
-        productImage.src = '../images/' + color + '.png';
+        productImage.src = productImgBase + color + '.png';
     })
 
 
